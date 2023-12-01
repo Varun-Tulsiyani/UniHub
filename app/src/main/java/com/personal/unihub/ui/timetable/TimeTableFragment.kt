@@ -21,7 +21,7 @@ class TimeTableFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val timeTableViewModel =
             ViewModelProvider(this).get(TimeTableViewModel::class.java)
 

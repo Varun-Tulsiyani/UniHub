@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.personal.unihub.databinding.FragmentNotificationsBinding
 
-class NotificationsFragment : Fragment : Fragment() {
+class NotificationsFragment : Fragment() {
 
     private var _binding: FragmentNotificationsBinding? = null
 

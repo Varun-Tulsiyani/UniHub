@@ -21,7 +21,7 @@ class NotesFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val notesViewModel =
             ViewModelProvider(this).get(NotesViewModel::class.java)
 

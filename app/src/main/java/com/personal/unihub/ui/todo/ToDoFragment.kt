@@ -21,7 +21,7 @@ class ToDoFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val toDoViewModel =
             ViewModelProvider(this).get(ToDoViewModel::class.java)
 
