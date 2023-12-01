@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.personal.unihub.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.personal.unihub.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.personal.unihub.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_timetable"
+        android:name="com.personal.unihub.ui.timetable.TimeTableFragment"
+        android:label="@string/title_timetable"
+        tools:layout="@layout/fragment_timetable" />
+
+    <fragment
+        android:id="@id/navigation_notes"
+        android:name="com.personal.unihub.ui.notes.NotesFragment"
+        android:label="@string/title_notes"
+        tools:layout="@layout/fragment_notes" />
+
+    <fragment
+        android:id="@+id/navigation_todo"
+        android:name="com.personal.unihub.ui.todo.TodoFragment"
+        android:label="@string/title_todo"
+        tools:layout="@layout/fragment_todo" />
+
+    <fragment
+        android:id="@+id/navigation_grades"
+        android:name="com.personal.unihub.ui.grades.GradesFragment"
+        android:label="@string/title_grades"
+        tools:layout="@layout/fragment_grades" />
+
+    <fragment
+        android:id="@+id/navigation_todo"
+        android:name="com.personal.unihub.ui.reminder.ReminderFragment"
+        android:label="@string/title_reminder"
+        tools:layout="@layout/fragment_reminder" />
+</navigation>
