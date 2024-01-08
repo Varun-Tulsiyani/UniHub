@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/navigation_todo"
-        android:name="com.personal.unihub.ui.todo.TodoFragment"
+        android:name="com.personal.unihub.ui.todo.ToDoFragment"
         android:label="@string/title_todo"
         tools:layout="@layout/fragment_todo" />
 
@@ -48,7 +48,7 @@
         tools:layout="@layout/fragment_grades" />
 
     <fragment
-        android:id="@+id/navigation_todo"
+        android:id="@+id/navigation_reminder"
         android:name="com.personal.unihub.ui.reminder.ReminderFragment"
         android:label="@string/title_reminder"
         tools:layout="@layout/fragment_reminder" />

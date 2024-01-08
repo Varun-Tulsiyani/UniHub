@@ -1,42 +1,40 @@
 package com.personal.unihub.ui.todo
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.personal.unihub.databinding.FragmentTodoBinding
+import com.personal.unihub.model.Task
 
 class ToDoFragment : Fragment() {
 
-    private var _binding: FragmentTodoBinding? = null
+    private lateinit var startToDoActivity: (Context, Task) -> Unit
 
-    // This property is only valid between onCreateView and
-    // onDestroyView
-    private val binding get() = _binding!!
+    companion object {
+        fun newInstance(startToDoActivity: (Context, Task) -> Unit): ToDoFragment {
+            val fragment = ToDoFragment()
+            fragment.startToDoActivity = startToDoActivity
+            return fragment
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val toDoViewModel =
-            ViewModelProvider(this).get(ToDoViewModel::class.java)
-
-        _binding = FragmentTodoBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textTodo
-        toDoViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        // Create a ComposeView and set its content
+        val composeView = ComposeView(requireContext()).apply {
+            setContent {
+                ToDoGrid(startToDoActivity)
+            }
         }
-        return root
+
+        // Return the ComposeView
+        return composeView
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }

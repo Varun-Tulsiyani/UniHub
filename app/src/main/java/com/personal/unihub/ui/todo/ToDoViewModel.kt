@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModel
 
 class ToDoViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is todo Fragment"
-    }
+    private val _text = MutableLiveData<String>().apply { value = "This is todo Fragment" }
     val text: LiveData<String> = _text
 }
